@@ -31,6 +31,7 @@ struct Provider {
         self.certificate = certificate
     }
 
+    // TODO
     /// Opens connection to provider.
     /// returns: Connection to the APNs provider
     func connect() -> Connection {
@@ -39,7 +40,7 @@ struct Provider {
 
     /// Closes a connection to provider
     func disconect(connection: Connection) {
-
+        // TODO
     }
 }
 
