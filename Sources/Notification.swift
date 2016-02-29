@@ -1,3 +1,5 @@
+import Foundation
+
 /// A push notification to be sent to a device.
 struct Notification {
     /// Priority of a notification, used for delivery.

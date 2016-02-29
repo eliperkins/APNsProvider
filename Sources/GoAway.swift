@@ -1,3 +1,5 @@
+import Foundation
+
 /// Indicates the APNs server has initiated a termination of the connection.
 struct GoAway {
     /// A reason that the termination has been initiated.

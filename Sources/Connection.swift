@@ -62,12 +62,12 @@ struct SendNotificationRequest: Request {
 
     init(notification: Notification) {
         self.path = "/3/device/\(notification.deviceToken)"
-        var headers = [String:String]()
-        if let ID = notification.ID {
+        var headers = [String:AnyObject]()
+        if let ID = notification.ID?.UUIDString {
             headers["apns-id"] = ID
         }
         if let expirationDate = notification.expirationDate {
-            headers["apns-expiration"] = expirationDate.timeIntervalSince1970()
+            headers["apns-expiration"] = expirationDate.timeIntervalSince1970
         }
         if let priority = notification.priority {
             headers["apns-priority"] = priority.rawValue
